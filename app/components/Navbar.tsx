@@ -25,7 +25,7 @@ const Navbar = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [openUserMenu, setOpenUserMenu] = useState(false);
 
-  // const { isSignedIn, user } = useUser();
+  const { isSignedIn, user } = useUser();
 
   useEffect(() => {
     if (openMobileMenu) {
