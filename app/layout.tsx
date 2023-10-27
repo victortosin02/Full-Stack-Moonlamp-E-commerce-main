@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Hydration from "./components/Hydration";
-import { ClerkProvider } from "@clerk/nextjs";
+// import { ClerkProvider } from "@clerk/nextjs";
 
 const poppins = Raleway({
   subsets: ["latin"],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <ClerkProvider>
+    // <ClerkProvider>
       <html lang="en">
         <body className={poppins.className}>
           <Hydration>
@@ -27,6 +27,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Hydration>
         </body>
       </html>
-    </ClerkProvider>
+    // </ClerkProvider>
   );
 }

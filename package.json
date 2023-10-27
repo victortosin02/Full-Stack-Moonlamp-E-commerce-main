@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^4.23.2",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@netlify/plugin-nextjs": "^4.41.1",
     "@prisma/client": "^5.1.1",

@@ -8,8 +8,8 @@ import Link from "next/link";
 import WishList from "./Wishlist";
 
 //CLERK IMPORTS
-import { UserButton } from "@clerk/nextjs";
-import { useUser } from "@clerk/nextjs";
+// import { UserButton } from "@clerk/nextjs";
+// import { useUser } from "@clerk/nextjs";
 
 // Next.js Imports
 import Image from "next/image";
@@ -25,7 +25,7 @@ const Navbar = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [openUserMenu, setOpenUserMenu] = useState(false);
 
-  const { isSignedIn, user } = useUser();
+  // const { isSignedIn, user } = useUser();
 
   useEffect(() => {
     if (openMobileMenu) {
