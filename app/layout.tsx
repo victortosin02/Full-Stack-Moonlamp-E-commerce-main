@@ -12,8 +12,8 @@ const poppins = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Moonlamp",
-  description: "Shop cool moonlamps",
+  title: "Explore AI Internship",
+  description: "Career Recommendation System Group 7",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
