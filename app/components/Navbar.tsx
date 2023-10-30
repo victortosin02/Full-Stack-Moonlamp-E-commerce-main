@@ -1,15 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useCartStore } from "@/store/useCartStore";
-import { useWishlistStore } from "@/store/useWishlistStore";
 import Link from "next/link";
-// import Cart from "./Cart";
-import WishList from "./Wishlist";
-
-//CLERK IMPORTS
-// import { UserButton } from "@clerk/nextjs";
-// import { useUser } from "@clerk/nextjs";
 
 // Next.js Imports
 import Image from "next/image";
@@ -18,7 +10,6 @@ import Image from "next/image";
 import logo from "@/public/dwwnld.png";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
-import { AiOutlineShoppingCart, AiOutlineHeart, AiOutlineUser } from "react-icons/ai";
 
 const Navbar = () => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -51,8 +42,6 @@ const Navbar = () => {
     };
   }, []);
 
-  const cartStore = useCartStore();
-  const wishlistStore = useWishlistStore();
 
   const handleMobileMenu = () => {
     setOpenMobileMenu(!openMobileMenu);
@@ -71,11 +60,6 @@ const Navbar = () => {
             : "hidden"
             }`}
         >
-          {/* <li>
-            <a href="/" className="hover:bg-sky-700" onClick={() => setOpenMobileMenu(false)}>
-              Shop
-            </a>
-          </li> */}
           <li>
             <a href="#features" className="hover:sky-700" onClick={() => setOpenMobileMenu(false)}>
               Career Metrics
@@ -105,17 +89,6 @@ const Navbar = () => {
           <Link href={"/sign-up"}>
             <button>Register</button>
           </Link>
-          {/* <div onClick={() => cartStore.toggleCart()} className="cursor-pointer relative">
-            <AiOutlineShoppingCart size={20} />
-            {cartStore.cart.length > 0 && (
-              <span className="bg-primary text-white text-sm font-bold w-4 h-4 rounded-full absolute left-2 bottom-3 flex items-center justify-center">
-                {cartStore.cart.length}
-              </span>
-            )}
-          </div> */}
-          {/* <div onClick={() => wishlistStore.toggleWishList()} className="cursor-pointer">
-            <AiOutlineHeart size={20} />
-          </div> */}
           {/* CLERK USER BUTTON */}
           {/* {!isSignedIn ? (
             <div>
@@ -136,8 +109,6 @@ const Navbar = () => {
           {!openMobileMenu ? <FiMenu size={25} /> : <MdClose size={25} />}
         </div>
       </div>
-      {/* {!cartStore.isOpen && <Cart />}
-      {!wishlistStore.openWishlist && <WishList />} */}
     </nav>
   );
 };
