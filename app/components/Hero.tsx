@@ -11,11 +11,11 @@ const Hero = () => {
           <h1 className="text-5xl font-bold text-[#1b263b]">
             Accelerate Your Career: Tap into Your Full Potentials
           </h1>
-          <p className="mt-5 text-[#778da9] font-bold- text-xl">
+          <p className="mt-5 text-[#778da9] font-bold- text-md">
             Embarking on a fulfilling career journey starts with making informed
-            decisions. Our state-of-the-art career guidance recommendation
-            system leverages cutting-edge technology to provide you with
-            personalized insights and expert advice.
+            decisions. Our state-of-the-art career guidance recommendation algorithm
+            leverages on psychometric tests and surveys to gain insights on your skills and experiences 
+            thereby providing you with personalized insights and expert advice in your career journey.
           </p>
           <div className="flex gap-5 mt-8">
             <Link href={"/survey"}>

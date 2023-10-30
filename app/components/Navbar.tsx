@@ -42,41 +42,61 @@ const Navbar = () => {
     };
   }, []);
 
-
   const handleMobileMenu = () => {
     setOpenMobileMenu(!openMobileMenu);
   };
 
   return (
-    <nav className={`py-4 w-full ${isScrolling ? "fixed top-0 bg-white shadow-lg z-10" : "relative"}`}>
+    <nav
+      className={`py-4 w-full ${
+        isScrolling ? "fixed top-0 bg-white shadow-lg z-10" : "relative"
+      }`}
+    >
       <div className="w-[89%] m-auto flex justify-between items-center  max-w-[1400px]">
         <a href="/">
           <Image src={logo} width={250} height={250} alt="explore logo" />
         </a>
 
         <ul
-          className={`md:flex items-center gap-8 md:static absolute text-lg font-semibold text-gray-600  ${openMobileMenu
-            ? "top-16 py-10 w-full bg-secondary left-0 text-center space-y-10 text-white drop-shadow-lg z-20"
-            : "hidden"
-            }`}
+          className={`md:flex items-center gap-8 md:static absolute text-md font-semibold text-gray-600  ${
+            openMobileMenu
+              ? "top-16 py-10 w-full bg-secondary left-0 text-center space-y-10 text-white drop-shadow-lg z-20"
+              : "hidden"
+          }`}
         >
           <li>
-            <a href="#features" className="hover:sky-700" onClick={() => setOpenMobileMenu(false)}>
+            <a
+              href="#features"
+              className="hover:text-sky-700"
+              onClick={() => setOpenMobileMenu(false)}
+            >
               Career Metrics
             </a>
           </li>
           <li>
-            <a href="#faq" onClick={() => setOpenMobileMenu(false)}>
+            <a
+              href="#faq"
+              className="hover:text-sky-700"
+              onClick={() => setOpenMobileMenu(false)}
+            >
               FAQ
             </a>
           </li>
           <li>
-            <a href="#contact" onClick={() => setOpenMobileMenu(false)}>
+            <a
+              href="#contact"
+              className="hover:text-sky-700"
+              onClick={() => setOpenMobileMenu(false)}
+            >
               Contact
             </a>
           </li>
           <li>
-            <a href="/survey" onClick={() => setOpenMobileMenu(false)}>
+            <a
+              href="/survey"
+              className="hover:text-sky-700"
+              onClick={() => setOpenMobileMenu(false)}
+            >
               Get Started
             </a>
           </li>
@@ -90,7 +110,7 @@ const Navbar = () => {
             <button>Register</button>
           </Link>
           {/* CLERK USER BUTTON */}
-          {/* {!isSignedIn ? (
+        {/* {!isSignedIn ? (
             <div>
               <Link href={"/sign-in"}>
                 <button>Logout</button>
