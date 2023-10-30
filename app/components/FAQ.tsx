@@ -38,12 +38,12 @@ function FAQComponent() {
   return (
     <div id="faq" className="w-full py-5">
       <div className="bg-[#e0e1dd] p-8 rounded-lg shadow-md w-[89%] max-w-[1400px] m-auto">
-        <h2 className="text-md mb-6 font-semibold">Frequently Asked Questions</h2>
+        <h2 className="text-2xl mb-6 font-semibold">Frequently Asked Questions</h2>
 
         {questions.map((q) => (
           <div key={q.id} className="mb-4 last:mb-0">
             <button
-              className="faq-question w-full text-left text-xl focus:outline-none p-4 bg-gray-100 rounded-lg shadow-md flex justify-between items-center"
+              className="faq-question w-full text-left text-md focus:outline-none p-4 bg-gray-100 rounded-lg shadow-md flex justify-between items-center"
               onClick={() => setActiveQuestion(activeQuestion === q.id ? null : q.id)}
             >
               {q.question}
