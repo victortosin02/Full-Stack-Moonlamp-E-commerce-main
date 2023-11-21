@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Images and Icons
-import logo from "@/public/dwwnld.png";
+import logo from "@/public/reco_white.png";
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 
@@ -54,7 +54,7 @@ const Navbar = () => {
     >
       <div className="w-[89%] m-auto flex justify-between items-center  max-w-[1400px]">
         <a href="/">
-          <Image src={logo} width={250} height={250} alt="explore logo" />
+          <Image src={logo} width={130} height={130} alt="explore logo" />
         </a>
 
         <ul
@@ -93,7 +93,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              href="/survey"
+              href="/instructions"
               className="hover:text-sky-700"
               onClick={() => setOpenMobileMenu(false)}
             >

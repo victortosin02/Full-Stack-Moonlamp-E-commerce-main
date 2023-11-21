@@ -3,7 +3,7 @@ import React, { useState, useEffect, SetStateAction } from "react";
 import ResponsesPage from "../ResponsesPage/page";
 import { useRouter } from "next/navigation";
 
-export default function Quiz() {
+export default function Transition() {
   // Define state variables
   const [userSkills, setUserSkills] = useState("");
   const [careerPath, setCareerPath] = useState("");
@@ -16,8 +16,8 @@ export default function Quiz() {
 
   // Array of questions
   const questions = [
-    "How would you describe the skills you currently possess?",
-    "How would you describe your interests professionally?",
+    "How would describe the skills you currently possess based on your prevoius and current career path?",
+    "Which career path would you want to transition to?",
   ];
 
   // Function to handle changes in user skills input
@@ -56,7 +56,6 @@ export default function Quiz() {
     }
   };
 
-  // Function to handle form submission
   const handleSubmit = async () => {
     setShowRecommendation(true);
     setLoading(true);
@@ -69,13 +68,16 @@ export default function Quiz() {
 
     try {
       // Make API request to Flask server
-      const response = await fetch("http://localhost:8080/api/predict", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "http://localhost:8080/api/transition_recommendations",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (response.ok) {
         // Parse the response JSON
